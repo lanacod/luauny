@@ -26,7 +26,16 @@ public class UserService {
 
     }
 
+    // == igual >= maior ou igual > maior < menor <= menor ou igual != diferente
     public User create(User userFuba) {
+       
+        if (userFuba.getName().equalsIgnoreCase("fuba")) {
+            // veraddeiro
+            userFuba.setName("Fuba é muito bom");
+        }
+
+    
         return repository.save(userFuba);
     }
 }
+
